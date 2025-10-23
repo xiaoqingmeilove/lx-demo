@@ -1,0 +1,58 @@
+.app-page {
+  .app-body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .app-right {
+      width: 0;
+      flex: 1;
+      height: 100%;
+
+      // background-color: rgb(10, 50, 180);
+      .menu-content {
+        display: flex !important;
+        flex-direction: row !important;
+
+        .menu-left {
+          width: 15%;
+          height: 100%;
+          // background-color: aqua;
+          display: flex;
+          flex-direction: column;
+          margin-right: 15px;
+
+          .el-tree {
+            flex: 1;
+            overflow: auto;
+          }
+        }
+
+        .menu-right {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          width: 0;
+          flex: 1;
+        }
+      }
+
+      .detailed-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .flex-table-section {
+          box-shadow: none;
+        }
+      }
+
+      .tableRowEdit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}

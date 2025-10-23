@@ -1,0 +1,33 @@
+[
+    {"label":"订单编号","field":"contractBillNo","type":"","width":"33%"},
+    {"label":"送货地址","field":"deliveryAddress","type":"","width":"33%"},
+    {"label":"收货联系人","field":"receiveLink","type":"","width":"33%"},
+    {"label":"联系电话","field":"receiveContact","type":"","width":"33%"},
+    {"label":"运输方式","field":"transportTypeName","type":"","width":"33%"},
+    {"label":"快递公司","field":"expressCompany","type":"","width":"33%"},
+    {"label":"快递单号","field":"expressNo","type":"","width":"33%"},
+    {"label":"司机姓名","field":"driverName","type":"","width":"33%"},
+    {"label":"司机联系方式","field":"driverTel","type":"","width":"33%"},
+    {"label":"车牌号","field":"carNo","type":"","width":"33%"},
+    {"label":"预计送货时间","field":"arrivalTime", "type": "date","width":"33%"},
+    {"label":"上传凭证","field":"","type":"","width":"33%","slot":"fileUpload"}
+]
+
+[
+    {"title":"需求池流水号","field":"requirementsBillNo","align":"left","width":170},
+    {"title":"采购商品","field":"materialName","align":"left","width":150},
+    {"title":"物料类型","field":"materialTypeName","align":"left","width":120},
+    {"title":"物料编码","field":"materialCode","align":"left","width":150},
+    {"title":"型号","field":"model","align":"left","width":150},
+    {"title":"规格","field":"standard","align":"left","width":120},
+    {"title":"电压","field":"voltageLevel","align":"left","width":150},
+    {"title":"属性","field":"attribute","align":"left","width":150},
+    {"title":"单位","field":"unit","align":"left","width":150},
+    {"title":"寻源方式","field":"sourcingMethodName","align":"right","width":120},
+    {"title":"订单数量","field":"qty","align":"right","width":120,"params":{"displayDigits":2}},
+    {"title":"订单金额","field":"amount","align":"right","width":120,"params":{"displayDigits":2,"addFooter":true}},
+    {"title":"本批次数量","field":"supplierName","align":"right","width":120,"params":{"displayDigits":2}},
+    {"title":"已发货数量","field":"bidQty","align":"right","width":120,"params":{"displayDigits":2}},
+    {"title":"已收货数量","field":"bidAmount","align":"right","width":150,"params":{"displayDigits":2}},
+    {"title":"未发货数量","field":"bidPrice","align":"right","width":150,"params":{"displayDigits":2}}
+]

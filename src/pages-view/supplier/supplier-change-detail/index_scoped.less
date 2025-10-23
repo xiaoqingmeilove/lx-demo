@@ -1,0 +1,170 @@
+.bill-bg {
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.file-list {
+  width: 90%;
+
+  .file-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    line-height: 19px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--base-color);
+    }
+
+    .file-list-item-name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.uploadBtn {
+  ::v-deep .upload-button-btn {
+    width: 100px !important;
+    height: 100px !important;
+    border: #ccc 1px dashed;
+    background-color: #FBFDFF !important;
+    color: #595959;
+    font-size: 36px;
+
+    &:hover {
+      border-color: var(--base-color);
+    }
+  }
+}
+
+.upload_spec {
+  font-size: 12px;
+  color: #858585;
+}
+
+.imgBox {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  border: #ccc 1px dashed;
+
+  .img-bnt {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    cursor: pointer;
+    display: none;
+  }
+
+  &:hover .img-bnt {
+    display: block;
+  }
+}
+
+.papers-form {
+  /deep/ .el-form-item__error {
+    top: 65%;
+  }
+}
+
+.due {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px;
+  margin-top: 5px;
+  width: 100%;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: #F5F7FA;
+
+    .bnt {
+      display: block;
+    }
+  }
+
+  .content {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bnt {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+::v-deep .my-content {
+  width: 360px !important;
+}
+
+.page-head-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  .logo {
+    width: 60px;
+    height: 60px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .page-form {
+    flex: 1;
+  }
+}
+
+.status {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px;
+
+  .dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+}
+.tab-body{
+  display: flex;
+  flex-direction: column;
+  // gap: 10px;
+  height: 100%;
+  .flex-body{
+    flex: 1;
+    height: 0;
+  }
+}

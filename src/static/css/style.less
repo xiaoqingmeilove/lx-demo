@@ -1,0 +1,417 @@
+:root {
+  --base-color: #1890FF;
+  --base-color-lighten: #dbeeff;
+  --base-color-lighten2: #bfe0ff;
+  --font-color: #595959;
+  --font-size: 14px;
+  --table-header-bg-color: #d1e9ff;
+  --table-header-text-color: #595959;
+  --table-border-color: #CADDE8;
+  --table-current-row-highlight: #e6f7ff;
+  --table-arrow-highlight: var(--base-color);
+  --table-filter-highlight: var(--base-color);
+  --table-current-row-crosswalkbgcolor:#f3f3f3;
+  --table-row-optionbordercolor:#dcdfe6;
+  --special-button-bg: var(--base-color);
+  --tabs-color:#a3a3a3;
+  --form-item-edit-color:#eee;
+
+  // --login-base-color: #fe0000;
+  // --login-text-color: #f65409;
+  // --login-button-color: #ffb756;
+
+  --login-base-color: #fff;
+  --login-text-color: #fff;
+  --login-button-color: #1890ff;
+}
+
+.el-loading-mask.is-fullscreen {
+  background: none !important;
+}
+
+.page-button {
+  border-color: transparent;
+  background: var(--base-color);
+  color: #fff;
+}
+.page-button--text {
+  color: var(--base-color);
+}
+
+.app-page {
+  display: inline-block;
+  width: 100%;
+}
+.app-page[flex] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.view-section {
+  display: inline-block;
+  margin-bottom: 16px;
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+  background: #fff;
+  color: #595959;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #eee;
+}
+.view-section[auto] {
+  flex: 1;
+  height: 0;
+  overflow: auto;
+}
+.app-page > .view-section:last-child {
+  margin-bottom: 0;
+}
+.tab-view-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.router-tab__contextmenu {
+  z-index: 9999;
+}
+
+.table--maximize {
+  position: absolute;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 910;
+  .app-table-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .app-table-body {
+      flex: 1;
+      height: 0;
+    }
+  }
+}
+
+/* 表格样式 */
+.app-table-container {
+  background: #fff;
+  border-radius: inherit;
+  .app-table-header {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0;
+    .sub-title {
+      margin-bottom: 0;
+    }
+    .app-table-action-layouts {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      > button {
+        color: var(--base-color);
+      }
+      .app-table-moveto {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 14px;
+        color: var(--base-color);
+        .app-table-moveto--input {
+          text-align: center;
+          margin: 0 8px;
+          line-height: 22px;
+          height: 22px;
+          width: 50px;
+          > input {
+            text-align: center;
+          }
+        }
+        .app-table-moveto--ok {
+          margin-left: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .app-table-body-top {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 0;
+    .sub-title {
+      margin-bottom: 0;
+    }
+    .app-table-action-layouts {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      .app-table-moveto {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 14px;
+        color: var(--base-color);
+        .app-table-moveto--input {
+          text-align: center;
+          margin: 0 8px;
+          line-height: 22px;
+          height: 22px;
+          width: 50px;
+          > input {
+            text-align: center;
+          }
+        }
+        .app-table-moveto--ok {
+          margin-left: 10px;
+        }
+      }
+    }
+    .app-table-body-top-toolbar {
+      flex: 1;
+      width: 0;
+      height: 100%;
+      padding: 0;
+      .app-table-body-top-tools {
+        margin: 0 10px;
+        font-size: 16px;
+        > i {
+          cursor: pointer;
+        }
+      }
+      .vxe-tools--wrapper,
+      .vxe-tools--operate {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .app-table-toolbar {
+    flex: 1;
+    width: 0;
+    height: 100%;
+    padding: 0;
+  }
+  .vxe-toolbar {
+    .vxe-buttons--wrapper {
+      justify-content: flex-end;
+      .file-button {
+        margin: 0 10px;
+      }
+    }
+    .vxe-tools--wrapper {
+      margin-left: 36px;
+    }
+  }
+  .app-table-tools {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .vxe-pager {
+    background: none;
+  }
+}
+
+.app-table-container[auto] {
+  display: flex;
+  flex-direction: column;
+  .app-table-body {
+    flex: 1;
+    height: 0;
+  }
+}
+/******************************************/
+
+.tab-content-container {
+  position: relative;
+}
+
+.app-page-drawer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  &~.v-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+  }
+}
+
+.workflow-drawer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 10;
+  .workflow-drawer-view {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+  }
+}
+
+.page-button {
+  height: 28px;
+}
+.page-button-dropdown {
+  .el-button-group {
+    .el-button {
+      background: var(--base-color);
+      color: #fff;
+      height: 28px;
+    }
+    .el-button:first-child {
+      padding: 0 12px;
+    }
+    .el-button:last-child {
+      padding: 0 3px;
+    }
+  }
+}
+.page-button-dropdown[aria-disabled="true"] {
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: #fff;
+    border-radius: inherit;
+    opacity: 0.5;
+    cursor: not-allowed;
+    z-index: 1;
+  }
+}
+
+.page-button +.page-button-dropdown,
+.page-button-dropdown +.page-button-dropdown,
+.page-button-dropdown +.page-button {
+  margin-left: 12px;
+}
+
+
+.page-collapse {
+  border: none;
+  .sub-title {
+    margin-bottom: 0;
+    padding-right: 12px;
+    width: 100%;
+  }
+  .el-collapse-item__header {
+    border-bottom: none;
+  }
+  .el-collapse-item__content {
+    padding: 0;
+  }
+  .el-collapse-item__wrap {
+    border-bottom: none;
+  }
+}
+
+// 7/31 禅道 675增加样式
+.sub-title {
+  margin-bottom: 0;
+}
+.data-form-container {
+  padding: 0;
+}
+.app-table-container .app-table-header {
+  // margin: 0;
+  // margin-bottom: 10px;
+}
+
+.app-table-toolbar .addLine{
+  margin-right: 12px;
+  .co-input{
+    width: 100px;
+    margin-right: 12px;
+  }
+}
+
+.filter-item--hidden {
+  display: none;
+}
+
+.el-scrollbar-y {
+  width: 100%;
+  height: 100%;
+  .el-scrollbar__wrap {
+    margin: 0 !important;
+    overflow: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.page-button.page-button-special {
+  background: var(--special-button-bg);
+  border: transparent;
+  color: #fff;
+}
+
+.vel-btns-wrapper .btn__close, .vel-btns-wrapper .btn__next, .vel-btns-wrapper .btn__prev{
+  font-size: 39px !important;
+  opacity: 1 !important;
+}
+.vel-modal{
+  background: rgba(0, 0, 0, .8) !important;
+}
+.vel-img{
+  background-color: #fff !important;
+}
+.vel-toolbar .toolbar-btn{
+  font-size: 39px !important;
+}
+.vel-img-title{
+  bottom: 75px !important;
+}
+
+.table-action-layouts{
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  > button {
+    color: var(--base-color);
+  }
+
+  .app-table-moveto {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+    color: var(--base-color);
+    .app-table-moveto--input {
+      text-align: center;
+      margin: 0 8px;
+      line-height: 22px;
+      height: 22px;
+      width: 50px;
+      > input {
+        text-align: center;
+      }
+    }
+    .app-table-moveto--ok {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+  }
+}

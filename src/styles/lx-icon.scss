@@ -1,0 +1,29 @@
+.lx-step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--gray-300);
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+
+    i {
+        font-size: 1.5rem;
+        color: var(--white);
+
+        &::before {
+            display: inline-block;
+            font-family: bootstrap-icons !important;
+            font-style: normal;
+            font-weight: normal !important;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            vertical-align: -.125em;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}

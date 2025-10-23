@@ -1,0 +1,113 @@
+//@base-color: #1890ff;
+//@base-color: var(--base-color);
+
+/* 基础按钮 */
+.page-button {
+  border-color: transparent;
+  background: var(--base-color);
+  color: #fff;
+}
+.page-button--text {
+  color: var(--base-color);
+}
+
+/* 下拉按钮 */
+.page-button-dropdown {
+  .el-button-group {
+    .el-button {
+      background: var(--base-color);
+    }
+  }
+}
+
+/* 左侧导航高亮 */
+.el-menu-item.is-active {
+  color: var(--base-color) !important;
+}
+
+/* 页面tab高亮 */
+.router-tab__item.is-active {
+  background: var(--base-color);
+}
+.router-tab__item:not(.is-active):hover {
+  color: var(--base-color);
+}
+/* 页面tab右键菜单 */
+.router-tab__contextmenu-item:hover {
+  color: var(--base-color);
+}
+
+// .tags-view-container {
+//   .tags-view-wrapper {
+//     .tags-view-item.active {
+//       border-color: var(--base-color) !important;
+//       background: var(--base-color) !important;
+//     }
+//   }
+// }
+
+/* 单据图标高亮 */
+.bill-info-item.bill-item--value {
+  .bill-info-icon {
+    color: var(--base-color);
+  }
+}
+/* laoding等待 */
+.el-loading-spinner i{
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--base-color);
+}
+
+.el-loading-spinner .el-loading-text {
+  color: var(--base-color);
+  font-size: 16px;
+}
+
+/* 页面头部名称 */
+.page-header--name {
+  color: var(--base-color);
+  // background: fade(var(--base-color), 20%);
+}
+
+/* 副标题 */
+.sub-title {
+  > h4 {
+    //color: var(--base-color);
+    &::before {
+      background: var(--base-color);
+    }
+  }
+}
+
+/* el-tab */
+.el-tabs__item.is-active,
+.el-tabs__item:hover {
+  color: var(--base-color);
+}
+.el-tabs__active-bar {
+  height: 0;
+  background: var(--base-color);
+}
+
+/* el-dropdown */
+.el-dropdown-menu__item:not(.is-disabled):hover,
+.el-dropdown-menu__item:focus {
+  color: var(--base-color);
+  background: var(--base-color-lighten);
+}
+
+h2.ceshi {
+  color: var(--base-color);
+}
+
+.bgc{
+  background-color: var(--base-color);
+}
+.base-font-color{
+  color: var(--base-color);
+}
+.fontColor{
+  color: var(--base-color);
+}
+

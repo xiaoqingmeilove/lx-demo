@@ -1,0 +1,165 @@
+.app-page {
+    .detailed-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        ::v-deep .flex-table-section {
+            flex: 1;
+            width: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: none;
+
+            .app-table-body {
+                flex: 1;
+            }
+
+            .app-table-container {
+                flex: 1;
+                height: 0;
+            }
+
+        }
+    }
+}
+::v-deep .view-section {
+    margin-bottom: 6px;
+}
+
+::v-deep .warp {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.warp[auto] {
+    flex: 1;
+    height: 0;
+}
+
+.left-tree {
+    margin-bottom: 6px;
+}
+
+.left-warp {
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .add-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &>div {
+        border-radius: 3px;
+        background: white;
+        position: relative;
+    }
+
+    &>div:last-child {
+        overflow: auto;
+        flex: 1;
+
+        &>.el-input {
+            margin-left: 10px;
+            margin-top: 5px;
+            width: calc(100% - 30px);
+            position: sticky;
+            top: 0px;
+            z-index: 99;
+        }
+    }
+}
+
+.left-tree-cont {
+    display: inline-block;
+    min-width: 100%;
+    padding-right: 10px;
+    overflow-x: auto;
+}
+.button {
+    font-size: 12px;
+    text-align: right;
+    button {
+        font-size: 12px;
+    }
+}
+.imgBox {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    border: #ccc 1px dashed;
+
+    .img-bnt {
+        position: absolute;
+        top: 2px;
+        right: 6px;
+        cursor: pointer;
+        display: none;
+    }
+
+    &:hover .img-bnt {
+        display: block;
+    }
+}
+.uploadBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+.uploadBtn {
+    ::v-deep .upload-button-btn {
+        width: 100px !important;
+        height: 100px !important;
+        border: #ccc 1px dashed;
+        background-color: #FBFDFF !important;
+        color: #595959;
+        font-size: 36px;
+
+        &:hover {
+            border-color: var(--base-color);
+        }
+    }
+}
+
+.upload_spec {
+    font-size: 12px;
+    color: #858585;
+}
+::v-deep .el-tabs{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .el-tabs__content{
+        flex: 1;
+        height: 0;
+        .el-tab-pane{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.table-body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    ::v-deep .search-component-fieldset{
+        padding: 0;
+    }
+    .view-section{
+        box-shadow: none;
+    }
+    .app-table-header{
+        margin: 0;
+    }
+}

@@ -1,0 +1,377 @@
+@rowHeight: 36px;
+
+.vxe-table--render-default .vxe-body--column,
+.vxe-table--render-default .vxe-footer--column,
+.vxe-table--render-default .vxe-header--column {
+  line-height: 18px;
+}
+.vxe-table--render-default .vxe-body--column:not(.col--ellipsis),
+.vxe-table--render-default .vxe-footer--column:not(.col--ellipsis),
+.vxe-table--render-default .vxe-header--column:not(.col--ellipsis) {
+  padding: 0;
+}
+.vxe-table {
+  .vxe-header--row {
+    height: @rowHeight;
+    > th {
+      background: var(--table-header-bg-color);
+      color: var(--table-header-text-color);
+      .svg-icon{
+        color: var(--base-color);
+      }
+    }
+  }
+  .vxe-footer--row {
+    height: @rowHeight;
+  }
+
+  .vxe-body--column:not(.col--ellipsis) {
+    height: @rowHeight;
+  }
+  .vxe-cell--label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    white-space: normal;
+  }
+  .vxe-table--body {
+    .vxe-cell {
+      > span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        white-space: normal;
+        line-height: 1;
+      }
+    }
+    .vxe-cell {
+      > .el-tag {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      }
+    }
+    .vxe-cell {
+      > .el-dropdown {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        white-space: normal;
+      }
+    }
+  }
+}
+
+.vxe-table--render-default {
+  color: var(--font-color);
+}
+.vxe-table--render-default .vxe-table--body,
+.vxe-table--render-default .vxe-table--footer,
+.vxe-table--render-default .vxe-table--header {
+  border-collapse: collapse;
+}
+.vxe-table--render-default.border--full .vxe-table--fixed-left-wrapper .vxe-body--column {
+  border: solid 1px var(--table-border-color);
+}
+.vxe-table--render-default.border--full .vxe-body--column,
+.vxe-table--render-default.border--full .vxe-footer--column,
+.vxe-table--render-default.border--full .vxe-header--column {
+  // background-image: linear-gradient(#CADDE8, #CADDE8), linear-gradient(#CADDE8, #CADDE8);
+  background-image: none;
+  border: solid 1px var(--table-border-color);
+}
+
+.vxe-table--render-default .vxe-header--column {
+  // text-align: center !important;
+}
+// 表格中数字输入框居右
+.vxe-table .number-input input {
+  text-align: right !important;
+}
+
+.vxe-table .vxe-sort--asc-btn,
+.vxe-table .vxe-sort--desc-btn {
+  height: 9px;
+  line-height: 6px;
+  font-size: 20px;
+  transform: scale(0.7);
+}
+.vxe-table .vxe-cell--sort {
+  width: 24px;
+  height: 12px;
+}
+
+.app-table-footer {
+  .vxe-pager {
+    height: auto;
+    min-height: 48px;
+  }
+}
+
+.vxe-table--footer-wrapper {
+  color: #595959;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.vxe-form,
+.vxe-input--inner {
+  color: #595959;
+}
+
+.vxe-cell--filter {
+  float: left;
+  line-height: 18px;
+  font-size: 15px;
+}
+
+.vxe-cell--filter .vxe-filter--btn,
+.vxe-table .vxe-sort--asc-btn,
+.vxe-table .vxe-sort--desc-btn {
+  color: #d2d2d2;
+}
+.is--filter-active .vxe-cell--filter .vxe-filter--btn,
+.vxe-table .vxe-sort--asc-btn.sort--active,
+.vxe-table .vxe-sort--desc-btn.sort--active {
+  color: var(--base-color);
+}
+.vxe-pager {
+  color: #595959;
+}
+
+.vxe-modal--wrapper.type--alert .vxe-modal--box,
+.vxe-modal--wrapper.type--confirm .vxe-modal--box,
+.vxe-modal--wrapper.type--modal .vxe-modal--box {
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+.vxe-header--column {
+  font-weight: normal;
+}
+
+.vxe-modal--wrapper {
+  color: #595959;
+  .vxe-modal--box {
+    border-radius: 8px;
+  }
+}
+.vxe-modal--wrapper .vxe-modal--header {
+  border-bottom: none;
+  background: none;
+  // .vxe-modal--header-title {
+  //   font-size: 16px;
+  //   padding-left: 24px;
+  //   position: relative;
+  //   &::before {
+  //     display: block;
+  //     content: "";
+  //     position: absolute;
+  //     left: 16px;
+  //     top: 0;
+  //     bottom: 0;
+  //     margin: auto;
+  //     width: 3px;
+  //     height: 11px;
+  //     border-radius: 4px;
+  //     background: #1890FF;
+  //   }
+  // }
+}
+
+.vxe-table {
+  .vxe-cell{
+    .number-input{
+      width: 100% !important;
+    }
+  }
+}
+
+.vxe-table {
+  .vxe-cell{
+    .vxe-pulldown{
+      width: 100% !important;
+    }
+  }
+}
+
+
+.vxe-table--render-default .vxe-table--header-wrapper.fixed-right--wrapper,
+.vxe-table--render-default .vxe-table--header-wrapper.fixed-left--wrapper{
+  overflow-y: hidden;
+}
+
+.vxe-button[type="reset"],
+.vxe-button.type--button.theme--primary:not(.is--disabled),
+.vxe-button.type--button.theme--primary:not(.is--disabled):hover,
+.vxe-button.type--button.theme--primary:not(.is--disabled):focus {
+  border-color: var(--base-color) !important;
+  background-color: var(--base-color) !important;
+  color: #fff !important;
+}
+
+.vxe-modal--wrapper.type--confirm  {
+  .vxe-modal--footer {
+    .vxe-button {
+      border-color: var(--base-color) !important;
+      background-color: var(--base-color) !important;
+      color: #fff !important;
+    }
+  }
+}
+
+.is--checked.vxe-checkbox,
+.is--checked.vxe-checkbox .vxe-checkbox--icon,
+.is--checked.vxe-custom--checkbox-option,
+.is--checked.vxe-custom--checkbox-option .vxe-checkbox--icon,
+.is--checked.vxe-export--panel-column-option,
+.is--checked.vxe-export--panel-column-option .vxe-checkbox--icon,
+.is--checked.vxe-table--filter-option,
+.is--checked.vxe-table--filter-option .vxe-checkbox--icon,
+.is--indeterminate.vxe-checkbox,
+.is--indeterminate.vxe-checkbox .vxe-checkbox--icon,
+.is--indeterminate.vxe-custom--checkbox-option,
+.is--indeterminate.vxe-custom--checkbox-option .vxe-checkbox--icon,
+.is--indeterminate.vxe-export--panel-column-option,
+.is--indeterminate.vxe-export--panel-column-option .vxe-checkbox--icon,
+.is--indeterminate.vxe-table--filter-option,
+.is--indeterminate.vxe-table--filter-option .vxe-checkbox--icon,
+.vxe-table--render-default .is--checked.vxe-cell--checkbox,
+.vxe-table--render-default .is--checked.vxe-cell--checkbox .vxe-checkbox--icon,
+.vxe-table--render-default .is--indeterminate.vxe-cell--checkbox,
+.vxe-table--render-default .is--indeterminate.vxe-cell--checkbox .vxe-checkbox--icon {
+  color: var(--base-color);
+}
+
+.vxe-table .vxe-sort--asc-btn:hover,
+.vxe-table .vxe-sort--desc-btn:hover {
+  color: var(--table-arrow-highlight);
+}
+.vxe-cell--filter .vxe-filter--btn:hover {
+  color: var(--table-filter-highlight);
+}
+
+
+.vxe-table--render-default .vxe-body--row.row--stripe {
+  background: var(--table-current-row-crosswalkbgcolor);
+}
+.vxe-table--render-default .vxe-body--row.row--current {
+  background: var(--table-current-row-highlight) !important;
+}
+
+
+.is--checked.vxe-radio,
+.is--checked.vxe-radio .vxe-radio--icon,
+.vxe-table--render-default .is--checked.vxe-cell--radio,
+.vxe-table--render-default .is--checked.vxe-cell--radio .vxe-radio--icon,
+.vxe-radio:not(.is--disabled):hover .vxe-radio--icon,
+.vxe-table--render-default .vxe-cell--radio:not(.is--disabled):hover .vxe-radio--icon,
+.vxe-radio:not(.is--disabled)>input:focus+.vxe-radio--icon {
+  color: var(--base-color);
+}
+
+.vxe-checkbox:not(.is--disabled):hover .vxe-checkbox--icon,
+.vxe-custom--checkbox-option:not(.is--disabled):hover .vxe-checkbox--icon,
+.vxe-export--panel-column-option:not(.is--disabled):hover .vxe-checkbox--icon,
+.vxe-table--filter-option:not(.is--disabled):hover .vxe-checkbox--icon,
+.vxe-table--render-default .vxe-cell--checkbox:not(.is--disabled):hover .vxe-checkbox--icon {
+  color: var(--base-color);
+}
+
+.vxe-checkbox:not(.is--disabled)>input:focus+.vxe-checkbox--icon {
+  color: var(--base-color);
+  box-shadow: none;
+}
+.vxe-input:not(.is--disabled).is--active .vxe-input--inner {
+  border-color: var(--base-color);
+}
+
+.vxe-table--filter-wrapper {
+  color: var(--base-color);
+  .vxe-table--filter-footer {
+    button,
+    button:not(.is--disabled):hover {
+      color: var(--base-color);
+    }
+  }
+}
+
+/* 表格分页 */
+.vxe-pager .vxe-pager--jump-prev:not(.is--disabled):hover,
+.vxe-pager .vxe-pager--jump-prev:not(.is--disabled):focus,
+.vxe-pager .vxe-pager--jump-prev:not(.is--disabled).is--active,
+.vxe-pager .vxe-pager--prev-btn:not(.is--disabled):hover,
+.vxe-pager .vxe-pager--prev-btn:not(.is--disabled):focus,
+.vxe-pager .vxe-pager--prev-btn:not(.is--disabled).is--active,
+.vxe-pager .vxe-pager--num-btn:not(.is--disabled):hover,
+.vxe-pager .vxe-pager--num-btn:not(.is--disabled):focus,
+.vxe-pager .vxe-pager--num-btn:not(.is--disabled).is--active,
+.vxe-pager .vxe-pager--next-btn:not(.is--disabled):hover,
+.vxe-pager .vxe-pager--next-btn:not(.is--disabled):focus,
+.vxe-pager .vxe-pager--next-btn:not(.is--disabled).is--active,
+.vxe-pager .vxe-pager--jump-next:not(.is--disabled):hover,
+.vxe-pager .vxe-pager--jump-next:not(.is--disabled):focus,
+.vxe-pager .vxe-pager--jump-next:not(.is--disabled).is--active {
+  border-color: var(--base-color);
+  color: var(--base-color);
+  box-shadow: none;
+}
+.vxe-pager .vxe-pager--jump .vxe-pager--goto:active,
+.vxe-pager .vxe-pager--jump .vxe-pager--goto:focus,
+.vxe-pager .vxe-select.is--active:not(.is--filter)>.vxe-input .vxe-input--inner {
+  border-color: var(--base-color);
+}
+.vxe-pager .vxe-select-option.is--selected.is--hover {
+  color: var(--base-color);
+}
+
+.vxe-select.is--active:not(.is--filter)>.vxe-input .vxe-input--inner {
+  border-color: var(--base-color);
+}
+.vxe-select-option.is--selected {
+  color: var(--base-color);
+}
+
+.vxe-loading>.vxe-loading--chunk,
+.vxe-loading>.vxe-loading--warpper {
+  color: var(--base-color);
+}
+
+.vxe-modal--wrapper .vxe-modal--close-btn:hover, 
+.vxe-modal--wrapper .vxe-modal--zoom-btn:hover {
+  color: var(--base-color);
+}
+.vxe-table--render-default .vxe-cell--checkbox .vxe-checkbox--icon,
+.vxe-table--render-default .vxe-cell--radio .vxe-radio--icon,
+.vxe-checkbox .vxe-checkbox--icon
+{
+  color:var(--table-row-optionbordercolor);
+}
+.vxe-switch.is--on .vxe-switch--button,
+.vxe-switch.is--disabled.is--on .vxe-switch--button{
+  background-color: var(--base-color);
+}
+.vxe-switch.is--off .vxe-switch--button,
+.vxe-switch.is--disabled.is--off .vxe-switch--button{
+  background-color: #DCDFE6;
+}
+.vxe-switch:not(.is--disabled) .vxe-switch--button:focus{
+  box-shadow: 0 0 0.4em 0 var(--base-color);
+}
+
+.vxe-table--body-wrapper, .vxe-table--fixed-left-body-wrapper, .vxe-table--fixed-right-body-wrapper{
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #eee;
+}
+
+.vxe-table-empty{
+  width: 200px;
+}

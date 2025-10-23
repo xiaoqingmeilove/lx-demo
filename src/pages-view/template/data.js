@@ -1,0 +1,56 @@
+[
+  { label: "客户名称", field: "customerName", type: "input", isDefault: true },
+  { label: "项目名称", field: "projectName", type: "input", isDefault: true },
+  {
+    label: "金额范围",
+    fields: ["beginTotalAmount", "endTotalAmount"],
+    type: "numberRange",
+    isDefault: true,
+  },
+  { label: "单据号", field: "billNo", type: "input", isDefault: true },
+  { label: "单据时间", fields: ["beginTime", "endTime"], type: "datePicker" },
+  {
+    label: "协议起期",
+    fields: ["protocolOriginBeginTime", "protocolOriginEndTime"],
+    type: "datePicker",
+  },
+  {
+    label: "协议止期",
+    fields: ["protocolStopBeginTime", "protocolStopEndTime"],
+    type: "datePicker",
+  },
+  {
+    label: "单据状态",
+    field: "billStateList",
+    type: "selectmulti",
+    source: "statelist",
+    output: "string",
+  },
+  { label: "报价单号", field: "quotedApplyBillNo", type: "input" },
+  {
+    label: "项目区域",
+    field: "areaCodeListName",
+    type: "input",
+    isDefault: false,
+  },
+  {
+    label: "是否框架协议",
+    field: "frameIdentification",
+    type: "select",
+    isDefault: false,
+    source: "yesNoList",
+  },
+  {
+    label: "申请时间",
+    fields: ["beginSubmissionTime", "endSubmissionTime"],
+    type: "datePicker",
+  },
+  {
+    label: "审核时间",
+    fields: ["beginAuditDate", "endAuditDate"],
+    type: "datePicker",
+  },
+  { label: "开票单位", field: "invoiceCompany", type: "input" },
+  { label: "申请人", field: "createUserName", type: "input", isDefault: false },
+  { label: "审核人", field: "auditorName", type: "input" },
+];

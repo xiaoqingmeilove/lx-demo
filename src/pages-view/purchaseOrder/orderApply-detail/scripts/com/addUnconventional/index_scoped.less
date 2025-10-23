@@ -1,0 +1,39 @@
+.app-page {
+  .app-page-view {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+      margin: 0;
+      box-shadow:none;
+      border-radius:0;
+    }
+    
+    footer {
+      display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    }
+    .flex-table-section{
+      display: flex; 
+      box-shadow: none;
+      border-radius:0;
+      .app-table-container{
+        width: 50%;
+        margin-right: 15px;
+      }
+    }
+  }
+  .tableradio {
+    /deep/.el-radio__input.is-disabled.is-checked .el-radio__inner {
+      background: #fff;
+      border-color: #21c215;
+    }
+    /deep/.el-radio__input.is-disabled.is-checked .el-radio__inner::after {
+      background-color: #21c215;
+    }
+  }
+}

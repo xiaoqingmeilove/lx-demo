@@ -1,0 +1,120 @@
+.workflow-detail {
+    height:100%;
+    display:flex;
+    >div:nth-child(1), >div:nth-child(2) {
+        height:100%;
+        margin-right:10px;
+        background:white;
+        border-radius:4px;
+        padding:10px;
+        box-sizing:border-box;
+        text-align:center;
+    }
+    > div:nth-child(1) {
+        width:215px;
+        overflow:auto;
+    }
+    > div:nth-child(2) {
+        width:210px;
+    }
+    > div:nth-child(3) {
+        flex:1;
+        height:100%;
+        background:white;
+        border-radius:4px;
+        padding:10px;
+        box-sizing:border-box;
+    }
+    .flow-begin {
+        margin-top:30px;
+        .el-button {
+            font-weight:bold;
+            padding:6px 20px;
+            > * {
+                font-weight:bold
+            }
+        }
+        .el-button, .is-plain {
+            background: #FFFFFF;
+            border-color: #1890ff;
+            color: #1890ff;
+        }
+    }
+    .wf-node {
+        margin:0 auto;
+        width:150px;
+        height:40px;
+        line-height:40px;
+        background:#1890FF;
+        color:white;
+        border-radius:5px;
+        cursor:pointer;
+    }
+    .wf-node:hover {
+        opacity:0.7;
+    }
+    .wf-line {
+        height:80px;
+        width:0;
+        border-left:2px solid #1890FF;
+        margin:10px calc(50% - 1px);
+    }
+    .flow-end {
+        margin:0 auto;
+        width:90px;
+        height:90px;
+        line-height:90px;
+        padding:3px;
+        border:3px solid #1890FF;
+        border-radius:50px;
+        text-align:center;
+        margin-bottom:25px;
+        > div {
+            margin:3px auto;
+            width:72px;
+            height:72px;
+            line-height:72px;
+            font-size:20px;
+            font-weight:bold;
+            border:1px solid #1890FF;
+            border-radius:40px;
+            color:#1890FF
+        }
+    }
+    .flow-exec {
+        margin:0 auto;
+        width:180px;
+        height:30px;
+        line-height:30px;
+        border-radius:5px;
+        cursor:pointer;
+        margin-bottom:15px;
+    }
+    .exec-selected {
+        background: #E2F6FF;
+        color:#1890FF;
+        font-weight:bold;
+    }
+    .btn-group {
+        position:absolute;
+        top:25px;
+        right:40px;
+        z-index:99
+    }
+    .wf-tabs {
+        position:relative;
+        height:100%;
+        .wf-pane {
+            height:100%;
+        }
+        .el-tabs__content {
+            height:calc(100% - 50px);
+        }
+        .wf-table {
+            height:calc(100% - 55px);
+        }
+        .wf-send {
+            height:100%;
+        }
+    }
+}

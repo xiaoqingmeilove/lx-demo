@@ -1,0 +1,170 @@
+.section {
+    height: 100%;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #333;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #eee;
+}
+
+.secondary {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: #666;
+
+    .item {
+        padding: 0 16px;
+
+        i {
+            font-size: 16px;
+            padding-right: 8px;
+        }
+
+        span {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+.contentBox{
+    text-align: center;
+}
+.content {
+    border-radius: 4px;
+    border-bottom: 1px solid #eee;
+    width: 960px;
+    display: inline-block;
+
+    .info-name {
+        margin: 16px;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 16px 0 16px 0;
+        text-align: left;
+
+    }
+
+    .item-name {
+        font-size: 14px;
+        margin-bottom: 16px;
+        padding-left: 35%;
+        text-align: left;
+    }
+
+    .itemBox {
+        padding-left: 35%;
+        text-align: left;
+    }
+
+    .item {
+        display: flex;
+        margin-bottom: 16px;
+
+        .label {
+            color: #333;
+        }
+
+        .value {
+            color: #666;
+        }
+    }
+
+    .fileBox {
+        margin: 16px;
+        padding: 12px 0 12px 0;
+        font-weight: bold;
+        color: #333;
+
+        .file-title {
+            text-align: left;
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .file-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        font-weight: 500;
+        font-size: 14px;
+
+        .file-download {
+            display: flex;
+            align-items: center;
+            color: #409EFF;
+
+            .file-name {
+                text-decoration: none;
+                padding-left: 10px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .file-size {
+                padding: 0 12px;
+                color: #999;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.countdownBox {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #77be57;
+    background-color: rgba(119, 190, 87, 0.1);
+    font-size: 14px;
+
+    .icon {
+        display: inline-block;
+        color: #77be57;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .time-content {
+        color: #77be57;
+
+        p {
+            padding: 4px 0;
+        }
+
+        .time-value {
+            color: #77be57;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .time-value-red {
+            color: #f56c6c;
+        }
+    }
+}
+
+.footer {
+    margin: 20px;
+
+    .footer-item {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+}

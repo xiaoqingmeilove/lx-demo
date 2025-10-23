@@ -1,0 +1,28 @@
+diff --git a/node_modules/element-ui/lib/element-ui.common.js b/node_modules/element-ui/lib/element-ui.common.js
+index 5631486..caafc4f 100644
+--- a/node_modules/element-ui/lib/element-ui.common.js
++++ b/node_modules/element-ui/lib/element-ui.common.js
+@@ -24523,6 +24523,14 @@ tab_nav_component.options.__file = "packages/tabs/src/tab-nav.vue"
+       [h('i', { 'class': 'el-icon-plus' })]
+     ) : null;
+ 
++    const buttons = this.$slots.buttons ? h(
++      'div',
++      {
++        'class': 'el-tabs__buttons'
++      },
++      [this.$slots.buttons]
++    ): null;
++
+     var navData = {
+       props: {
+         currentName: currentName,
+@@ -24538,7 +24546,7 @@ tab_nav_component.options.__file = "packages/tabs/src/tab-nav.vue"
+     var header = h(
+       'div',
+       { 'class': ['el-tabs__header', 'is-' + tabPosition] },
+-      [newButton, h('tab-nav', navData)]
++      [newButton, buttons, h('tab-nav', navData)]
+     );
+     var panels = h(
+       'div',

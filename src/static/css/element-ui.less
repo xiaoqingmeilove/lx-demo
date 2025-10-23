@@ -1,0 +1,293 @@
+/* button */
+.el-button--primary {
+  background-color: var(--base-color);
+  border-color: var(--base-color);
+  &:hover {
+    background-color: var(--base-color);
+    border-color: var(--base-color);
+  }
+}
+
+/* tabs */
+.el-tabs:not(.el-tabs--border-card) {
+  &[flex] {
+    flex: 1;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    > .el-tabs__content {
+      flex: 1;
+      height: 0;
+      .el-tab-pane {
+        height: 100%;
+        overflow: auto;
+      }
+    }
+    .el-tabs__nav-wrap,
+    .el-tabs__nav-scroll {
+      overflow: unset;
+    }
+  }
+  .el-tabs__item {
+    padding: 0;
+    font-size: 16px;
+    color: #a3a3a3;
+    > span {
+      display: block;
+      padding: 0 16px;
+      transition: all 0.5s;
+    }
+  }
+  .el-tabs__item.is-active,
+  .el-tabs__item:hover {
+    color: var(--base-color);
+  }
+  .el-tabs__item.is-active {
+    > span {
+      // box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+      // border-radius: 4px 4px 0 0;
+    }
+  }
+  .el-tabs__active-bar {
+    color: var(--base-color);
+  }
+  .el-tabs__nav-wrap::after {
+    background: none;
+  }
+  .el-tabs__header {
+    margin-bottom: 10px;
+  }
+  .el-tabs__header.is-top::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f6f6f6;
+  }
+  .el-tabs__buttons {
+    display: flex;
+    align-items: center;
+    float: right;
+    padding: 0 12px;
+    height: 40px;
+  }
+}
+.el-tabs:not(.el-tabs--border-card) .el-tabs__item.is-active,
+.el-tabs:not(.el-tabs--border-card) .el-tabs__item:hover {
+  box-shadow: none;
+}
+
+.el-menu-item,
+.el-submenu__title {
+  padding: 0 15px !important;
+}
+.el-submenu__title i {
+  font-weight: bold;
+  color: #505050;
+}
+.el-submenu .el-menu-item {
+  font-size: 16px;
+  padding: 0 45px !important;
+}
+
+
+.el-radio {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0;
+  .el-radio__input {
+    .el-radio__inner {
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  &:hover {
+    .el-radio__input:not(.is-disabled) {
+      .el-radio__inner {
+        border-color: var(--base-color);
+      }
+    }
+  }
+  .el-radio__input:not(.is-disabled) {
+    line-height: 0;
+    &.is-checked .el-radio__inner {
+      background: #fff;
+      border-color: var(--base-color);
+      &::after {
+        background: var(--base-color);
+      }
+    }
+    &.is-checked + .el-radio__label {
+      color: #595959;
+    }
+  }
+  &+.el-radio {
+    margin-left: 12px;
+  }
+}
+
+.el-radio-button__orig-radio:checked + .el-radio-button__inner{
+  background-color: var(--base-color);
+  border-color: var(--base-color);
+  box-shadow: none;
+}
+.el-radio-button__inner:hover {
+  color: var(--base-color);
+}
+
+.el-cascader__dropdown {
+  .el-radio {
+    &:hover {
+      .el-radio__input:not(.is-disabled) {
+        .el-radio__inner {
+          border-color: var(--base-color);
+        }
+      }
+    }
+    .el-radio__input:not(.is-disabled) {
+      line-height: 0;
+      &.is-checked .el-radio__inner {
+        background: #fff;
+        border-color: var(--base-color);
+        &::after {
+          background: var(--base-color);
+        }
+      }
+    }
+  }
+}
+
+.el-input__inner {
+  color: #595959;
+}
+.el-input__inner:focus {
+  border-color: var(--base-color);
+}
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: var(--base-color);
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  color: var(--base-color);
+}
+.el-select-dropdown__item.selected {
+  color: var(--base-color);
+}
+.el-select .el-input__inner:focus {
+  border-color: var(--base-color);
+}
+
+.el-message-box__wrapper {
+  .el-button {
+    background: var(--base-color) !important;
+    color: #fff !important;
+    border-color: var(--base-color) !important;
+  }
+}
+.el-date-table td.today span,
+.el-date-table td.available:hover {
+  color: var(--base-color);
+}
+.el-picker-panel__icon-btn:hover {
+  color: var(--base-color);
+}
+.el-cascader .el-input.is-focus .el-input__inner {
+  border-color: var(--base-color);
+}
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-selectable.in-checked-path,
+.el-cascader-node.is-active {
+  color: var(--base-color);
+}
+.el-textarea__inner:focus {
+  border-color: var(--base-color);
+}
+.el-date-table td.current:not(.disabled) span {
+  background-color: var(--base-color);
+}
+.el-picker-panel__footer {
+  .el-button--text {
+    color: var(--base-color);
+  }
+  .el-button:hover {
+    border-color: var(--base-color);
+    color: var(--base-color);
+  }
+}
+.el-time-panel__btn.confirm {
+  color: var(--base-color);
+}
+.el-date-picker__header-label:hover {
+  color: var(--base-color);
+}
+.el-range-editor.is-active:hover {
+  border-color: var(--base-color);
+}
+.el-month-table td.today .cell,
+.el-month-table td.current:not(.disabled) .cell,
+.el-month-table td .cell:hover {
+  color: var(--base-color);
+}
+
+.el-input__inner:focus {
+  border-color: var(--base-color);
+}
+
+.el-input-number__increase:hover,
+.el-input-number__decrease:hover {
+  color: var(--base-color);
+}
+
+.el-switch.is-checked .el-switch__core {
+  border-color: var(--base-color);
+  background-color: var(--base-color);
+}
+
+.el-range-editor.is-active {
+  border-color: var(--base-color);
+}
+.el-date-table td.start-date span,
+.el-date-table td.end-date span {
+  background: var(--base-color);
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color: var(--base-color);
+}
+.el-checkbox__input.is-indeterminate .el-checkbox__inner,
+.el-checkbox__input.is-checked .el-checkbox__inner{
+  background-color: var(--base-color);
+  border-color: var(--base-color);
+}
+.el-checkbox__input.is-checked + .el-checkbox__label,
+.el-transfer-panel__item:hover{
+  color: var(--base-color);
+}
+.el-checkbox__inner:hover{
+  border-color: var(--base-color);
+}
+
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+  background: var(--base-color-lighten);
+  color: var(--base-color);
+}
+
+.el-tag {
+  background-color: var(--base-color-lighten);
+  color: var(--base-color);
+}
+.el-radio.is-bordered.is-checked {
+  border-color: var(--base-color);
+}
+.el-tooltip__popper.is-dark{
+  max-width: 500px;
+}
+.el-notification__group{
+  width: 100%;
+}
+.el-select .el-tag{
+  max-width: 70%;
+}

@@ -1,0 +1,84 @@
+.app-page {
+  .detailed-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /deep/.flex-table-section {
+      display: flex;
+      flex-direction: column;
+      box-shadow: none;
+      .app-table-body {
+        flex: 1;
+      }
+      .app-table-container {
+        flex: 1;
+        height: 0;
+      }
+    }
+  }
+}
+/deep/ .view-section{
+  margin-bottom: 6px;
+}
+/deep/ .warp{
+  display: flex;
+  justify-content: space-between;
+}
+.warp[auto] {
+  flex: 1;
+  height: 0;
+}
+.left-tree{
+  margin-bottom: 6px;
+}
+.left-warp { 
+  box-sizing: border-box;
+  width: auto;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  .add-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 10px;
+  }
+  &>div {
+    border-radius: 3px;
+    background: white;
+    padding-left: 10px;
+    position: relative;
+  }
+  &>div:last-child {
+    overflow: auto;
+    flex: 1;
+    margin-bottom: 10px;
+    &>.el-input {
+      margin-left: 10px;
+      margin-top: 5px;
+      width: calc(100% - 30px);
+      position: sticky;
+      top: 0px;
+      z-index: 99;
+    }
+  }
+}
+.left-tree-cont{
+  display: inline-block;
+  min-width: 100%;
+  padding-right: 10px;
+  overflow-x: auto;
+}
+/deep/ .el-form-item__error{
+  top: 70%;
+}
+/deep/ .el-tabs__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  .el-tabs__buttons{
+    flex: 1;
+    justify-content: flex-end;
+  }
+}

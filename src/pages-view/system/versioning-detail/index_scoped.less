@@ -1,0 +1,43 @@
+.app-page{
+  .detailed-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    .detailed-containe-table{
+      flex: 1;
+    }
+    
+    .view-botton-warp {
+      position: absolute;
+      bottom: 50px;
+      right: 30px;
+      font-size: 18px;
+      > div {
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+    
+  }
+} 
+/deep/ .view-section{
+  margin-bottom: 0;
+  box-shadow: none;
+} 
+/deep/ .app-table-container .app-table-header{
+  padding: 0;
+}
+/deep/ .number-input{
+  width: 100% !important;
+}
+.editor-body{
+  height: calc(100% - 50px); 
+}
+.form--selecttree {
+  width: 100%;
+
+  /deep/ .el-input__inner {
+    border: none;
+    padding: 0 6px;
+  }
+}

@@ -1,0 +1,30 @@
+[
+    {"label":"物料代码","field":"materialCode","type":"input","isDefault":true},
+    {"label":"物料名称","field":"materialName","type":"input","isDefault":true},
+    {"label":"型号","field":"model","type":"input","isDefault":true},
+    {"label":"规格","field":"standard","type":"input","isDefault":true},
+    {"label":"电压","field":"voltageLevel","type":"input"},
+    {"label":"规格说明","field":"attribute","type":"input"},
+    {"label":"当前库存","fields":["beginRealTimeStockQty","endRealTimeStockQty"],"type":"numberRange"},
+    {"label":"在途数","fields":["beginTransitQty","endTransitQty"],"type":"numberRange"},
+    {"label":"安全库存","fields":["beginSafetyStockQty","endSafetyStockQty"],"type":"numberRange"},
+    {"label":"状态","field":"warningFlag","type":"select","output":"string","source":"stateList"}
+]
+
+
+[
+    {"field":"rowNum","title":"序号","width":80,"type":"checkbox","align":"center","slots":{"default":"rowNum"}},
+    {"field":"materialCode","title":"物料代码","minWidth":130,"align":"left"},
+    {"field":"materialName","title":"物料名称","minWidth":130,"align":"left"},
+    {"field":"model","title":"型号","minWidth":130,"align":"left"},
+    {"field":"standard","title":"规格","minWidth":130,"align":"left"},
+    {"field":"voltageLevel","title":"电压","minWidth":130,"align":"left"},
+    {"field":"attribute","title":"规格说明","minWidth":130,"align":"left"},
+    {"field":"realTimeStockQty","title":"当前库存","minWidth":100,"align":"left"},
+    {"field":"transitQty","title":"在途数","minWidth":100,"align":"left"},
+    {"field":"safetyStockQty","title":"安全库存","minWidth":100,"align":"left"},
+    {"field":"demandQty","title":"采购需求量","minWidth":100,"align":"left"},
+    {"field":"suggestQty","title":"建议采购量","minWidth":100,"align":"left"},
+    {"field":"warningFlag","title":"状态","minWidth":100,"align":"left","slots":{"default":"warningFlag"}},
+    {"field":"action","title":"操作","width":130,"align":"left","fixed":"right","slots":{"default":"action"}}
+]

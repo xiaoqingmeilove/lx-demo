@@ -1,0 +1,12 @@
+[
+  {"label":"物料分类","field":"materialTypeId","type":"input","isDefault":true,"slot":"slot_tree","source":"materialTypeList"},
+  {"label":"物料代码","field":"materialCode","type":"input","isDefault":true},
+  {"label":"物料名称","field":"materialName","type":"input","isDefault":true},
+  {"label":"型号","field":"model","type":"input","isDefault":true},
+  {"label":"规格","field":"standard","type":"input"},
+  {"label":"电压","field":"voltageLevel","type":"input"},
+  {"label":"计划单价","fields":["beginPlanPrice","endPlanPrice"],"type":"numberRange"},
+  {"label":"是否禁用","field":"status","type":"select","source":"YesorNoList"},
+  {"label":"单据时间","fields":["beginCreateTime","endCreateTime"],"type":"datePicker"},
+  {"label":"更新时间","fields":["beginUpdateTime","endUpdateTime"],"type":"datePicker"}
+]

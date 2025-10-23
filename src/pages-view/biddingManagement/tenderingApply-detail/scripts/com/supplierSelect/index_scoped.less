@@ -1,0 +1,114 @@
+.gyskp-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+.gyskp-item.Ac{
+    border: 1px solid #409EFF;
+    background: rgba(55 ,177, 255 , 0.05);
+}
+.gyskp-item {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+
+    .gyskp-item-title {
+        display: flex;
+        height: 60px;
+        line-height: 60px;
+        font-weight: bold;
+        font-size: 16px;
+        align-items: center;
+        background-color: #f5f7fa;
+
+        img {
+            margin-left: 10px;
+        }
+
+        .gyskp-item-title-left {
+            padding-left: 10px;
+        }
+
+        .gyskp-item-title-right {
+            padding: 0 10px;
+            margin-left: auto;
+            font-size: 14px;
+
+            span {
+                padding: 5px 12px;
+                border-radius: 4px;
+                background-color: #e8f5e9;
+            }
+
+            .AC {
+                background-color: #e8f5e9;
+                color: #00c178;
+            }
+
+            .reject {
+                background-color: #ffe3e3;
+                color: #ff5d5d;
+            }
+        }
+    }
+
+    .gyskp-item-content {
+        padding: 10px 10px 20px;
+
+        .gyskp-item-info {
+            p {
+                padding: 5px 20px;
+
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .proj-info {
+            display: flex;
+            margin-top: 10px;
+            padding-left: 20px;
+            height: 26px;
+            height: 26px;
+
+            p {
+                text-align: left;
+                width: 50%;
+
+
+                span {
+                    color: #409EFF;
+                    font-weight: bold;
+                }
+
+                .flag-text {
+                    color: #333;
+                    font-weight: normal;
+                    font-size: 14px;
+                    padding: 4px 10px;
+                    border-radius: 4px;
+                    background-color: #f5f7fa;
+                }
+
+                .AC {
+                    color: #409EFF;
+                    background-color: #f5f7fa;
+                }
+            }
+        }
+
+        .flag-info {
+            min-height: 40px;
+            line-height: 40px;
+        }
+    }
+}
+
+.change-btn {
+    padding: 10px 20px;
+}

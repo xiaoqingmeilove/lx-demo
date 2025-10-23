@@ -1,0 +1,32 @@
+.fadein-enter-active,
+.fadein-leave-active {
+	transition: opacity .3s;
+  opacity: 1;
+}
+.fadein-enter,
+.fadein-leave-active {
+	opacity: 0;
+}
+
+.fade-right-enter-active,
+.fade-right-leave-active {
+	transition: all .3s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-right-enter,
+.fade-right-leave-active {
+	opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-left-enter-active,
+.fade-left-leave-active {
+	transition: all .3s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-left-enter,
+.fade-left-leave-active {
+	opacity: 0;
+  transform: translateX(100%);
+}

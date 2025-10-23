@@ -1,0 +1,344 @@
+.workflow-comments-view {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.workflow-comments-scrollbar {
+  flex: 1;
+  height: 0;
+  width: 100%;
+  > .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+}
+.workflow-comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 0;
+}
+.workflow-comment-list-item {
+  display: flex;
+  gap: 6px;
+  .workflow-comment-dropdown {
+    position: absolute;
+    bottom: 0;
+    left: -25px;
+    display: none;
+    cursor: pointer;
+  }
+  &:hover .workflow-comment-dropdown {
+    display: block;
+  }
+}
+.workflow-comment-avatar {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+  }
+}
+.workflow-comment-wrapper {
+  flex: 1;
+  width: 0;
+  padding-right: 40px;
+}
+.workflow-comment-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  font-size: 14px;
+  color: #666;
+}
+.workflow-comment-content-container {
+  position: relative;
+  .workflow-comment-content-bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 6px;
+    height: 24px;
+  }
+}
+
+.workflow-comment-content {
+  padding: 10px;
+  background: #f2f2f2;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 4px;
+  word-break: break-all;
+  blockquote {
+    background: #f2f2f2;
+    margin: 0 0 6px 0;
+    padding: 6px;
+    border-left: 3px solid #ddd;
+    font-size: 13px;
+    color: #999;
+  }
+  img {
+    max-width: 100%;
+  }
+  strong.at-user {
+    color: var(--base-color);
+    font-weight: normal;
+    cursor: default;
+  }
+}
+.workflow-comment--self {
+  flex-direction: row-reverse;
+  .workflow-comment-wrapper {
+    padding-right: 0;
+    padding-left: 40px;
+  }
+  .workflow-comment-info {
+    justify-content: flex-end;
+  }
+  .workflow-comment-content {
+    background: #c9e7ff;
+    color: #000;
+  }
+  .comment-user-avatar {
+    background: #1890ff;
+  }
+}
+.workflow-comment-reply {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  blockquote {
+    margin: 6px 0;
+    padding: 6px;
+    border-left: 3px solid #ddd;
+    background: #f2f2f2;
+    color: #999;
+    font-size: 13px;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.workflow-comment-reply-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 0 2px;
+  height: 40px;
+}
+.workflow-comment-tips {
+  color: #999;
+  font-size: 14px;
+}
+.workflow-comment-dropdown {
+  .el-dropdown-menu {
+    padding: 0;
+  }
+}
+.workflow-comment-reply-to {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #aaa;
+}
+.reply-to-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  &:hover {
+    background: #ddd;
+  }
+  > svg {
+    fill: #000;
+  }
+}
+.comment-user-avatar {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  margin-right: 3px;
+  border-radius: 50%;
+  background: var(--base-color);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 5px 0 0;
+    margin: 0 auto;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 5px;
+    margin: 0 auto;
+    width: 20px;
+    height: 10px;
+    border-radius: 16px;
+    background: #fff;
+  }
+}
+.comment-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 60px;
+  font-size: 14px;
+  color: #aaa;
+}
+.workflow-comment-editor {
+  height: 160px;
+  .w-e-text-container [data-slate-editor] p {
+    margin: 0;
+  }
+  .w-e-text-placeholder {
+    top: 3px;
+  }
+}
+.workflow-comment-reply-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  color: #999;
+  margin-right: 12px;
+  .workflow-comment-reply-tools-item {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  svg {
+    cursor: pointer;
+  }
+}
+.workflow-comment-autofresh {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  font-size: 14px;
+}
+.workflow-comment-fresh-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  margin-left: auto;
+}
+.workflow-comment-auto-fresh {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  .auto-fresh-time {
+    width: 80px;
+  }
+}
+.workflow-comment-manul-fresh {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  > svg {
+    fill: var(--base-color);
+  }
+}
+.withdraw-tips {
+  margin: 6px 0;
+  text-align: center;
+  width: 100%;
+  color: #aaa;
+  font-size: 13px;
+}
+.comment-userlist {
+  position: absolute;
+  bottom: 0;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  width: 130px;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.comment-userlist-item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 24px;
+  cursor: pointer;
+  &:hover {
+    background: var(--base-color-lighten2);
+  }
+  &.on {
+    color: var(--base-color);
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 0;
+    height: 100%;
+    > span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.tool-item-at.on {
+  > svg {
+    color: var(--base-color)
+  }
+}
+.workflow-comment-files {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  background: #fff;
+  padding: 6px;
+  border: 1px solid #f2f2f2;
+  color: #666;
+  font-size: 14px;
+}
+.workflow-comment-file-item {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  .workflow-comment-file-name {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 0;
+    > a {
+      padding: 0 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      &:hover {
+        color: var(--base-color);
+      }
+    }
+  }
+}

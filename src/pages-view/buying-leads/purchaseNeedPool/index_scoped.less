@@ -1,0 +1,38 @@
+.radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  /deep/.el-radio-group {
+    margin-top: 18px;
+
+    .el-radio-button {
+      margin: 0px 12px 10px 0;
+
+      .el-radio-button__inner {
+        background-color: #F0F0F0;
+        color: #A3A3A3;
+        border-radius: 5px;
+        padding: 8px;
+        border: none;
+      }
+
+    }
+
+    .is-active {
+      box-shadow: none;
+      margin: 0px 12px 10px 0;
+
+      .el-radio-button__inner {
+        background-color: #F0F0F0;
+        color: var(--base-color);
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/deep/.app-table-container .vxe-toolbar .vxe-buttons--wrapper {
+  padding: 0 0 0 20px;
+  justify-content: space-between;
+}

@@ -1,0 +1,18 @@
+[
+    {"field":"rowNum","title":"序号","width":80,"type":"checkbox","align":"center","slots":{"default":"rowNum"}},
+    {"field":"materialName","title":"物料名称","width":190,"minWidth":100,"align":"left"},
+    {"field":"materialCode","title":"物料代码","width":190,"minWidth":100,"align":"left"},
+    {"field":"materialTypeName","title":"物料分类","minWidth":100,"align":"left"},
+    {"field":"model","title":"型号","minWidth":100,"align":"left"},
+    {"field":"standard","title":"规格","minWidth":100,"align":"left"},
+    {"field":"voltageLevel","title":"电压","minWidth":100,"align":"left"},
+    {"field":"attribute","title":"属性","width":80,"minWidth":80,"align":"left"},
+    {"field":"unit","title":"单位","width":100,"minWidth":100,"align":"left"},
+    {"field":"planPrice","title":"计划单价","minWidth":100,"align":"right","params":{"displayDigits":2}},
+    {"field":"status","title":"是否禁用","width":100,"align":"left","slots":{"default":"status"}},
+    {"field":"createUserName","title":"创建人","minWidth":100,"align":"left"},
+    {"field":"createTime","title":"创建时间","width":190,"minWidth":100,"align":"left"},
+    {"field":"updateTime","title":"更新时间","width":190,"minWidth":100,"align":"left"},
+    {"field":"remark","title":"物品描述","width":170,"minWidth":100,"align":"left"},
+    {"field":"action","title":"操作","width":100,"minWidth":100,"align":"center","slots":{"default":"doing"}}
+]
