@@ -5,12 +5,13 @@ import { amisEnv } from '@/amis/env';
 export interface AmisRendererProps {
   schema: SchemaNode;
   className?: string;
+  data?: Record<string, unknown>;
 }
 
-const AmisRenderer: React.FC<AmisRendererProps> = ({ schema, className }) => {
+const AmisRenderer: React.FC<AmisRendererProps> = ({ schema, className, data }) => {
   const env = useMemo(() => amisEnv, []);
 
-  return <div className={className}>{renderAmis(schema, {}, env)}</div>;
+  return <div className={className}>{renderAmis(schema, data ?? {}, env)}</div>;
 };
 
 export default AmisRenderer;

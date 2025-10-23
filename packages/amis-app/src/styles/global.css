@@ -60,6 +60,44 @@ body {
   padding: 24px;
 }
 
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.status-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.page-loading,
+.page-error {
+  padding: 48px;
+  background: #fff;
+  border-radius: var(--app-border-radius);
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+}
+
+.page-error button {
+  margin-top: 12px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #409eff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.page-error button:hover {
+  background: #337ecc;
+}
+
 .not-found {
   text-align: center;
   margin-top: 10vh;
