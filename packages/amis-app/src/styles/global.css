@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light dark;
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2d3d;
+  --app-header-height: 56px;
+  --app-border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #f5f7fa;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-layout__header {
+  height: var(--app-header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: #1f2d3d;
+  color: #fff;
+}
+
+.app-layout__brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.app-layout__nav a {
+  margin-left: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.app-layout__nav a.is-active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.app-layout__content {
+  flex: 1;
+  padding: 24px;
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.not-found a {
+  color: #409eff;
+}

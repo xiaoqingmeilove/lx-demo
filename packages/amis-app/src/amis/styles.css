@@ -1,0 +1,11 @@
+.app-title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--amis-border-color);
+}
+
+.app-title h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
